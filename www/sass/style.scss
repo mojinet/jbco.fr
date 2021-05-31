@@ -1,0 +1,239 @@
+$mainColor : #EF7E41;
+$secondaryColor : #417BEF;
+$darkColor : #282828;
+$lightColor : white;
+$ide_red : #AA3527;
+$ide_green : #7DBC29;
+$ide_yellow : #CA9B2C;
+$ide_blue : #437EAE;
+
+$mainFont : 'Roboto';
+$titleFont : 'Montserrat';
+$subTitleFont : '';
+$handWritterFont : '';
+@import url(/public/css/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300&display=swap');
+
+/*General*/
+body{
+    margin : 0;
+    font-family: $mainFont;
+    font-weight: normal;
+}
+
+h1,h2,h3,h4{
+    font-family: $titleFont;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+
+.hx_light{
+    font-weight: normal;
+}
+
+h3{
+    font-size: 3em;
+}
+
+h4{
+    font-size: 2em;
+}
+
+/*Layout*/
+.l_competences,.l_mainFooter,.l_presentation,.l_realisations,.l_topHeader{
+    padding : 0 50px;
+}
+
+.l_topHeader{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.l_presentation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.l_realisations{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.l_competences{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.l_mainFooter{
+
+}
+
+/*Module*/
+// Header
+.mainHeader{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .logoHeader{
+        padding-right: 20px;
+    }
+}
+
+//Jumbotron
+.topJumbotron{
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-size: 3em;
+    }
+
+    img{
+        width: 70%;
+        align-self: center;
+    }
+}
+
+// titre + sous-titre
+.titleWithSubTitle{
+    line-height: 0px;
+    width: 100%;
+
+    .hx_light{
+        text-align: end;
+    }
+}
+
+// avatar
+.presentation_avatar{
+
+}
+
+// presentation_main
+.presentation_main{
+    width: 50%;
+    display: inline-block;
+}
+
+// presentation_cv
+.presentation_cv{
+    position: relative;
+
+    img{
+        width: 200px;
+    }
+
+    .presentation_cv_avatar{
+        width: 50px;
+        z-index: -1;
+
+        position: absolute;
+        top: -20px;
+        right: -30px;
+    }
+}
+
+//
+.realisation_item{
+    display: flex;
+    justify-content: center;
+
+    .realisation_item_monitor{
+        .realisation_img{
+            width: 500px;
+        }
+    }
+    
+    .realisation_item_description{
+        width: 50%;
+    }
+}
+
+//
+.competences_header{
+    display: flex;
+    justify-content: center;
+}
+
+//
+.competences_item{
+    .ide_yellow{
+        color : $ide_yellow;
+        font-family: $titleFont;
+        font-weight: bold;
+    }
+    .ide_blue{
+        color : $ide_blue;
+        font-family: $titleFont;
+        font-weight: bold;
+    }
+    .ide_green{
+        color : $ide_green;
+        font-family: $titleFont;
+        font-weight: bold;
+    }
+}
+
+/*Theme*/
+a{
+    font-family: $titleFont;
+    font-weight: bold;
+    color : white;
+}
+
+.l_topHeader{
+    background-color: $mainColor;
+    color: $lightColor;
+}
+
+.l_presentation{
+
+}
+
+.l_realisations{
+    background-color: $secondaryColor;
+    color: $lightColor;
+}
+
+.l_competences{
+    background-color: $darkColor;
+    color: lighten($darkColor,40);
+
+    h3{
+        color: $ide_red;
+    }
+}
+
+.l_mainFooter{
+    background-color: $mainColor;
+    color: $lightColor;
+}

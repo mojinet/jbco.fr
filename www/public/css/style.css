@@ -1,0 +1,187 @@
+@import url(/public/css/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300&display=swap");
+/*General*/
+body {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Montserrat";
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hx_light {
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+/*Layout*/
+.l_competences, .l_mainFooter, .l_presentation, .l_realisations, .l_topHeader {
+  padding: 0 50px;
+}
+
+.l_topHeader {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l_presentation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.l_realisations {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.l_competences {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*Module*/
+.mainHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mainHeader .logoHeader {
+  padding-right: 20px;
+}
+
+.topJumbotron {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topJumbotron h2 {
+  font-size: 3em;
+}
+.topJumbotron img {
+  width: 70%;
+  align-self: center;
+}
+
+.titleWithSubTitle {
+  line-height: 0px;
+  width: 100%;
+}
+.titleWithSubTitle .hx_light {
+  text-align: end;
+}
+
+.presentation_main {
+  width: 50%;
+  display: inline-block;
+}
+
+.presentation_cv {
+  position: relative;
+}
+.presentation_cv img {
+  width: 200px;
+}
+.presentation_cv .presentation_cv_avatar {
+  width: 50px;
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  right: -30px;
+}
+
+.realisation_item {
+  display: flex;
+  justify-content: center;
+}
+.realisation_item .realisation_item_monitor .realisation_img {
+  width: 500px;
+}
+.realisation_item .realisation_item_description {
+  width: 50%;
+}
+
+.competences_header {
+  display: flex;
+  justify-content: center;
+}
+
+.competences_item .ide_yellow {
+  color: #CA9B2C;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.competences_item .ide_blue {
+  color: #437EAE;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.competences_item .ide_green {
+  color: #7DBC29;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+/*Theme*/
+a {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+}
+
+.l_topHeader {
+  background-color: #EF7E41;
+  color: white;
+}
+
+.l_realisations {
+  background-color: #417BEF;
+  color: white;
+}
+
+.l_competences {
+  background-color: #282828;
+  color: #8e8e8e;
+}
+.l_competences h3 {
+  color: #AA3527;
+}
+
+.l_mainFooter {
+  background-color: #EF7E41;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
