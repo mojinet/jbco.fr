@@ -1,24 +1,40 @@
+// couleur
 $mainColor : #EF7E41;
 $secondaryColor : #417BEF;
 $darkColor : #282828;
+$greyLight : #7D8082;
 $lightColor : white;
+// couleur partie competences
 $ide_red : #AA3527;
 $ide_green : #7DBC29;
 $ide_yellow : #CA9B2C;
 $ide_blue : #437EAE;
-
+// Font
 $mainFont : 'Roboto';
 $titleFont : 'Montserrat';
 $subTitleFont : '';
-$handWritterFont : '';
+$handWritterFont : 'Architects Daughte';
+// MediaQuerry breakpoint
+$mq_xxl : '1400px';
+$mq_xl : '1200px';
+$mq_l : '992px';
+$mq_m : '768px';
+$mq_s : '576px';
+
 @import url(/public/css/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300&display=swap');
 
-/*General*/
+/*******************************************************************/
+/*                          General                                */
+/*******************************************************************/
+
 body{
     margin : 0;
     font-family: $mainFont;
     font-weight: normal;
+    box-sizing: border-box;
+    text-align: justify;
 }
 
 h1,h2,h3,h4{
@@ -50,18 +66,22 @@ h4{
     font-size: 2em;
 }
 
-/*Layout*/
-.l_competences,.l_mainFooter,.l_presentation,.l_realisations,.l_topHeader{
-    padding : 0 50px;
+/*******************************************************************/
+/*                          Layout                                 */
+/*******************************************************************/
+
+.l_competences,.l_mainFooter,.l_presentation,.l_realisations{
+    padding : 50px 10px;
 }
 
 .l_topHeader{
-    min-height: 100vh;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding : 0 10px;
 }
 
 .l_presentation{
@@ -70,19 +90,13 @@ h4{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
 .l_realisations{
-    padding-top: 50px;
-    padding-bottom: 50px;
+
 }
 
 .l_competences{
-    padding-top: 50px;
-    padding-bottom: 50px;
     
 }
 
@@ -90,62 +104,127 @@ h4{
 
 }
 
-/*Module*/
+/*******************************************************************/
+/*                        Modules : bloc                           */
+/*******************************************************************/
+
 // Header
+//*******************************************
 .mainHeader{
     width: 100%;
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 0 50px;
+}
 
-    .logoHeader{
-        padding-right: 20px;
+// main_logo
+.main_logo{
+    &--light{
+        font-weight: normal;
     }
 }
 
-//Jumbotron
-.topJumbotron{
-    flex-grow: 1;
+// main_nav
+.main_nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    display: none;
+    @media screen and (min-width: $mq_s){ display: block;}
+}
 
+//Jumbotron
+//*******************************************
+.jumbotron{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
 
-    h2{
-        font-size: 3em;
+    &__title{
+        font-size: 1.5em;
+        @media screen and (min-width: $mq_s){ font-size: 2.5em;}
+        @media screen and (min-width: $mq_l){ font-size: 4em;}
     }
 
-    img{
-        width: 70%;
+    &__subtitle{
+        text-align: end;
+        position: relative;
+        top: -30px;
+        font-size: 1em;
+        font-family: $handWritterFont;
+        @media screen and (min-width: $mq_s){ font-size: 1.5em; top: -65px;}
+        @media screen and (min-width: $mq_l){ font-size: 2em; top: -95px;}
+    }
+
+    &__image{
+        width: 100%;
+        max-width: 430px;
         align-self: center;
     }
 }
 
-// titre + sous-titre
-.titleWithSubTitle{
-    line-height: 0px;
-    width: 100%;
+// Avatar presentation
+//*******************************************
+.presentation_avatar{
+    border: 1px solid #000;
+    position: relative;
 
-    .hx_light{
-        text-align: end;
+    &__image_base{
+        width: 100%;
+        max-width: 130px;
+    }
+
+    &__image_avatar{
+        width: 120%;
+        max-width: 180px;
+        position: absolute;
+        top : -130px;
+        left: -25px;
+        transform-origin: center bottom;
+        animation: 5s infinite avatar_head;
     }
 }
 
-// avatar
-.presentation_avatar{
-
+@keyframes avatar_head {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
 }
 
 // presentation_main
+//*******************************************
 .presentation_main{
     width: 50%;
-    display: inline-block;
+    border: 1px solid #000;
+    &__title{
+        font-size: 1.5em;
+        @media screen and (min-width: $mq_s){ font-size: 2.5em;}
+        @media screen and (min-width: $mq_l){ font-size: 4em;}
+    }
+
+    &__subtitle{
+        text-align: start;
+        position: relative;
+        top: -30px;
+        font-size: 1em;
+        color : $greyLight;
+        font-family: $handWritterFont;
+        @media screen and (min-width: $mq_s){ font-size: 1.2em; top: -50px;}
+        @media screen and (min-width: $mq_l){ font-size: 2em; top: -80px;}
+    }
 }
 
 // presentation_cv
+//*******************************************
 .presentation_cv{
+    border: 1px solid #000;
     position: relative;
 
     img{
@@ -203,7 +282,10 @@ h4{
     }
 }
 
-/*Theme*/
+/*******************************************************************/
+/*                          Themes                                 */
+/*******************************************************************/
+
 a{
     font-family: $titleFont;
     font-weight: bold;
