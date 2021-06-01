@@ -47,8 +47,10 @@
 
             <!-- Module : main -->
             <div class="presentation_main">
-                <h3 class="presentation_main__title">Presentation</h3>
-                <p class="presentation_main__subtitle">Hello world</p>
+                <div>
+                    <h3 class="presentation_main__title">Presentation</h3>
+                    <p class="presentation_main__subtitle">Hello world</p>
+                </div>
                 <p>
                     Bonjour ! 
                     <br><br>
@@ -68,44 +70,48 @@
 
             <!--Module : cv -->
             <div class="presentation_cv">
-                <img src="/public/rss/img/CV_mini.png" alt="">
-                <img src="/public/rss/img/avatar_suprised.png" alt="" class="presentation_cv_avatar">
+                <a href="/public/rss/doc/CV_2021v3.pdf"><img src="/public/rss/img/CV_mini.png" alt="" class="presentation_cv__cv"></a>
+                <img src="/public/rss/img/avatar_suprised.png" alt="" class="presentation_cv__avatar">
             </div>
         </section>
 
         <!-- Layout : realisations -->
-<!--         <section class="l_realisations"> -->
-            <!--Module titre section -->
-<!--             <div class="titleWithSubTitle">
-                <h3>Mes réalisations</h3>
-                <p class="hx_light">bien plus que du code, une passion !</p>
-            </div> -->
+        <section class="l_realisations">
 
-            <!--Module : item Left : jbco.fr-->
-<!--             <div class="realisation_item">
-                <div class="realisation_item_monitor">
-                    <img src="/public/rss/img/mockup_jbco.png" alt="" class="realisation_img">
-                </div>
-    
-                <div class="realisation_item_description">
+            <!--Module titre section -->
+            <div class="realisation_title">
+                <h3 class="realisation_title__title">Mes réalisations</h3>
+                <p class="realisation_title__subtitle">bien plus que du code, une passion !</p>
+            </div>
+
+
+
+            <!--Module : jbco.fr-->
+            <div class="realisation_item">
+                <img class="realisation_item__monitor" src="/public/rss/img/mockup_jbco.png" alt="" class="realisation_img">
+                <div class="realisation_item__description">
                     <h4>Jbco.fr</h4>
                     <p>
                         Jbco.fr est le site que vous visiter actuellement, 
                         il permet de faire connaitre mes compétences en 
                         développement informatique. Le contenu des réalisations 
                         sera mis à jours régulièrement.
-                        <br><br>
-                        Détail techniques :<br>
-                        Création d'une maquette avec adobe XD<br>
-                        Intégration HTML - CSS - Sass<br>
-                        Développement avec PHP
                     </p>
+                        <h5>Technologies utilisé :</h5>
+                        <div class="realisation_item__technologie">
+                            <img class="realisation_item__logo" src="/public/rss/logo/xd.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/ps.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
+                        </div>
                 </div>
-            </div> -->
+            </div>
 
-            <!--Module : item right hazpiq.com-->
-<!--             <div class="realisation_item">
-                <div class="realisation_item_description">
+            <!--Module : hazpiq.com-->
+            <div class="realisation_item">
+                <img class="realisation_item__monitor" src="/public/rss/img/mockup_hazpiq.png" alt="">
+                <div class="realisation_item__description">
                     <h4>Hazpiq.com</h4>
                     <p>
                         Hazpiq.com est le site d'un groupe de métal progressif 
@@ -113,173 +119,201 @@
                         en janvier 2019 et le site permet de le promouvoir avec 
                         les différentes sections tel que music et live qui regroupe 
                         leur clips musicaux. 
-                        <br><br>
-                        Détail techniques : <br>
-                        Intégration suivant maquette en HTML - CSS - Sass
                     </p>
+                        <h5>Technologies utilisé :</h5>
+                        <div class="realisation_item__technologie">
+                            <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
+                        </div>
                 </div>
-                <div class="realisation_item_monitor">
-                    <img src="/public/rss/img/mockup_hazpiq.png" alt="" class="realisation_img">
-                </div>
-            </div> -->
+                    
+            </div>
 
-            <!--Module : item Left : CseTerritoireMoulins.fr-->
-<!--             <div class="realisation_item">
-                <div class="realisation_item_monitor">
-                    <img src="/public/rss/img/mockup_cse.png" alt="" class="realisation_img">
-                </div>
-    
-                <div class="realisation_item_description">
+            <!--Module : CseTerritoireMoulins.fr-->
+            <div class="realisation_item">
+                <img class="realisation_item__monitor" src="/public/rss/img/mockup_cse.png" alt="">
+                <div class="realisation_item__description">
                     <h4>CseTerritoireMoulins.fr</h4>
                     <p>
-                        cseterritoiremoulins.fr est le site du comité social et économique de l'UNAPEI d'Yzeure. Il permet au membres du comité de visualisé les actualités, de poser des questions anonyme et au administrateur du site de gérer le contenus du site.
-                        <br><br>
-                        Détail techniques :<br>
-                        Création d'une maquette avec adobe XD<br>
-                        Intégration HTML - CSS - Sass<br>
-                        Développement avec PHP & MySQL :<br>
-                        Création d'un espace d'administration pour gérer tout le contenue du site
+                        cseterritoiremoulins.fr est le site du comité social et économique 
+                        de l'UNAPEI d'Yzeure. Il permet au membres du comité de visualisé les 
+                        actualités, de poser des questions anonyme et au administrateur du site de 
+                        gérer le contenus du site.
+                    </p>
+                        <h5>Technologies utilisé :</h5>
+                        <div class="realisation_item__technologie">
+                            <img class="realisation_item__logo" src="/public/rss/logo/xd.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/php.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/mysql.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
+                            <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
+                         </div>
+                </div>
+            </div>
+
+            <!--Module : A venir -->
+            <div class="realisation_item">
+                <div class="realisation_item__coming">
+                    <h5>A venir</h5>
+                    <span>Revenez vite !</span>
+                </div>
+                <div class="realisation_item__description">
+                    <h4>A venir</h4>
+                    <p>
+                        D'autres projet sont en cours de développement et 
+                        ne vont pas tarder à apparaitre sur le site !
                     </p>
                 </div>
             </div>
-        </section> -->
+        </section>
         
         <!-- Layout : competences -->
-<!--         <section class="l_competences"> -->
+        <section class="l_competences">
             <!--Module : header-->
-<!--             <div class="competences_header">
-                <div class="competence_header_avatar">
-                    <img src="/public/rss/img/avatarPresW.png" alt="">
-                </div>
-                <div class="competences_header_title">
-                    <p>
+            <div class="competences_header">
+                <img class="competences_header__avatar" src="/public/rss/img/avatarPresW.png" alt="">
+                <p class="competences_header__comment">
+                    /* <br>
+                    *  <br>
+                    Je peux intervenir principalement sur le développement back-end
+                    et front-end mais j'ai également quelques compétences en infographie qui me 
+                    permettent de réaliser des maquettes avant la création de site internet.
+                    <br>
+                    *<br>
+                    */
+                </p>
+                <h3 class="competences_header__title"><span class="competences_header__title--litle">public enum </span>Compétences {</h3>   
+            </div>
+
+            <!--Modules items -->
+            <div class="competences_items">
+                <!--Module : compétences back-end-->
+                <div class="competences_item">
+                    <p class="competences_item__comment">
                         /* <br>
                         * <br>
-                        * Je peux intervenir principalement sur le développement back-end<br>
-                        * et front-end mais j'ai également quelques compétences en infographie qui me <br>
-                        * permettent de réaliser des maquettes avant la création de site internet.<br>
-                        *<br>
+                        Je peux créer divers fonctionnalités en PHP 
+                        ou en Java EE et interagir avec une base de
+                        données relationnel
+                        <br>
+                        * <br>
                         */
                     </p>
-                    <h3>public enum Compétences {</h3>
-                </div>    
-            </div> -->
-
-            <!--Module : compétences back-end-->
-<!--             <div class="competences_item">
-                <p>
-                    /* <br>
-                    * Je peux créer divers fonctionnalités en PHP <br>
-                    * ou en Java EE et interagir avec une base de <br>
-                    * données relationnel<br>
-                    */
-                </p>
-                <p>
-                    <span class="ide_yellow">Competences.</span>
-                    <span class="ide_blue">BACK_END</span>
-                </p>
-                <div class="competences_items_detail">
-                    <img src="/public/rss/img/001-gearsW.png" alt="">
-                    <p class="ide_green">
-                        PHP & Symfony <br>
-                        Java EE<br>
-                        SQL : MySQL, PL/SQL/ SQL server<br>
-                    </p>
+                    <div>
+                        <span class="ide_yellow">Competences.</span>
+                        <span class="ide_blue">BACK_END</span>
+                    </div>
+                    <div class="competences_item__tech">
+                        <img src="/public/rss/img/001-gearsW.png" alt="">
+                        <p class="ide_green">
+                            PHP & Symfony <br>
+                            Java EE<br>
+                            SQL : MySQL, PL/SQL/ SQL server<br>
+                        </p>
+                    </div>
                 </div>
-            </div> -->
 
-            <!--Module : compétences front-end-->
-<!--             <div class="competences_item">
-                <p>
-                    /* <br>
-                    * Je peux réaliser l'intégration d'une maquette <br>
-                    * fournis en HTML et CSS ainsi que d'ajouter du <br>
-                    * dynamisme avec Javascript<br>
-                    */
-                </p>
-                <p>
-                    <span class="ide_yellow">Competences.</span>
-                    <span class="ide_blue">FRONT_END</span>
-                </p>
-                <div class="competences_items_detail">
-                    <img src="/public/rss/img/001-monitorW.png" alt="">
-                    <p class="ide_green">
-                        HTML <br>
-                        CSS, Sass & bootstrap <br>
-                        Javascript <br>
+                <!--Module : compétences front-end-->
+                <div class="competences_item">
+                    <p class="competences_item__comment">
+                        /* <br>
+                        * <br>
+                        Je peux réaliser l'intégration d'une maquette 
+                        fournis en HTML et CSS ainsi que d'ajouter du 
+                        dynamisme avec Javascript<br>
+                        * <br>
+                        */
                     </p>
+                    <p>
+                        <span class="ide_yellow">Competences.</span>
+                        <span class="ide_blue">FRONT_END</span>
+                    </p>
+                    <div  class="competences_item__tech">
+                        <img src="/public/rss/img/001-monitorW.png" alt="">
+                        <p class="ide_green">
+                            HTML <br>
+                            CSS, Sass & bootstrap <br>
+                            Javascript <br>
+                        </p>
+                    </div>
                 </div>
-            </div> -->
 
-            <!--Module : compétences design-->
-<!--             <div class="competences_item">
-                <p>
-                    /*
-                    * Je peux intervenir sur la partie design et 
-                    * principalement sur la maquette afin de participé 
-                    * ou de données un avis pertinent
-                    */
-                </p>
-                <p>
-                    <span class="ide_yellow">Competences.</span>
-                    <span class="ide_blue">DESIGN</span>
-                </p>
-                <div class="competences_items_detail">
-                    <img src="/public/rss/img/003-color-palette.png" alt="">
-                    <p class="ide_green">
-                        Adobe XD <br>
-                        Photoshop <br>
-                        Illustrator <br>
+                <!--Module : compétences design-->
+                <div class="competences_item">
+                    <p class="competences_item__comment">
+                        /* <br>
+                        * <br>
+                        Je peux intervenir sur la partie design et 
+                        principalement sur la maquette afin de participé 
+                        ou de données un avis pertinent <br>
+                        * <br>
+                        */
                     </p>
-                </div>
-            </div>  -->       
-            
-            <!--Module : compétences methodes-->
-<!--             <div class="competences_item">
-                <p>
-                    /* <br>
-                    * J'ai acquis des méthodologies de travail allant <br>
-                    * de l'analyse et la conception à l'organisation du <br>
-                    * travail collaboratif avec Scrum et Git <br>
-                    */                                   
-                </p>
-                <p>
-                    <span class="ide_yellow">Competences.</span>
-                    <span class="ide_blue">METHODES</span>
-                </p>
-                <div class="competences_items_detail">
-                    <img src="/public/rss/img/001-conceptW.png" alt="">
-                    <p class="ide_green">
-                        Modelisation de données (Oracle CDM)<br>
-                        Méthodologie Agile (Scrum)<br>
-                        UML<br>
-                        Versionning avec git<br>
+                    <p>
+                        <span class="ide_yellow">Competences.</span>
+                        <span class="ide_blue">DESIGN</span>
                     </p>
-                </div>
-            </div>  -->
-
+                    <div  class="competences_item__tech">
+                        <img src="/public/rss/img/003-color-palette.png" alt="">
+                        <p class="ide_green">
+                            Adobe XD <br>
+                            Photoshop <br>
+                            Illustrator <br>
+                        </p>
+                    </div>
+                </div>         
+                
+                <!--Module : compétences methodes-->
+                <div class="competences_item">
+                    <p class="competences_item__comment">
+                        /* <br>
+                        * <br>
+                        J'ai acquis des méthodologies de travail allant 
+                        de l'analyse et la conception à l'organisation du 
+                        travail collaboratif avec Scrum et Git <br>
+                        * <br>
+                        */                                 
+                    </p>
+                    <p>
+                        <span class="ide_yellow">Competences.</span>
+                        <span class="ide_blue">METHODES</span>
+                    </p>
+                    <div  class="competences_item__tech">
+                        <img src="/public/rss/img/001-conceptW.png" alt="">
+                        <p class="ide_green">
+                            Modelisation de données (Oracle CDM)<br>
+                            Méthodologie Agile (Scrum)<br>
+                            UML<br>
+                            Versionning avec git<br>
+                        </p>
+                    </div>
+                </div> 
+            </div>
             <!--Module : footer-->
-<!--             <h3>}</h3>
-        </section> -->
+            <h3 class="competences_header__title">}</h3>
+        </section>
 
         <!-- Layout : footer -->
-<!--         <footer class="l_mainFooter">
-            <div class="footer_avatar">
-                <img src="/public/rss/img/img_contact.png" alt="">
-            </div>
-            <div class="footer_main">
-                <p>
-                    Je m'appelle Jean-Baptiste Cochinard et je suis développeur web. 
-                    Passionné par les nouvelle technologies et particulièrement par le 
-                    développement d'applications web et mobile.
-                </p>
-                <div class="footer_reseaux">
-                    <img src="" alt="fb">
-                    <img src="" alt="in">
-                    <img src="" alt="git">
+        <footer class="l_mainFooter">
+            <div class="footer">
+                <img class="footer__avatar"src="/public/rss/img/img_contact.png" alt="">
+                <div class="footer__main">
+                    <p>
+                        Je m'appelle Jean-Baptiste Cochinard et je suis développeur web. 
+                        Passionné par les nouvelle technologies et particulièrement par le 
+                        développement d'applications web et mobile.
+                    </p>
+                    <p>Retrouvez moi sur les réseaux :</p>
+                    <div class="footer__reseaux">
+                        <a href="https://github.com/mojinet"><img class="footer__reseaux__icon" src="/public/rss/logo/github-sign.png" alt="mail"></a>
+                        <a href="https://www.linkedin.com/in/JBCochinard/"><img class="footer__reseaux__icon" src="/public/rss/logo/003-linkedin.png" alt="in"></a>
+                        <a href="mailto:jeanbaptiste.cochinard@gmail.com"><img class="footer__reseaux__icon" src="/public/rss/logo/002-gmail.png" alt="git"></a>
+                    </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </main>
 </body>
 </html>

@@ -76,7 +76,6 @@ h4{
 
 .l_topHeader{
     height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,22 +85,34 @@ h4{
 
 .l_presentation{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap : 20px 10px;
+    padding-top : 150px;
+    @media screen and (min-width: $mq_l){ flex-direction: row;}
 }
 
 .l_realisations{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .l_competences{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .l_mainFooter{
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 /*******************************************************************/
@@ -170,7 +181,6 @@ h4{
 // Avatar presentation
 //*******************************************
 .presentation_avatar{
-    border: 1px solid #000;
     position: relative;
 
     &__image_base{
@@ -186,31 +196,37 @@ h4{
         left: -25px;
         transform-origin: center bottom;
         animation: 5s infinite avatar_head;
-    }
-}
 
-@keyframes avatar_head {
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(-10deg);
+        @keyframes avatar_head {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(-10deg);
+            }
+        }
     }
 }
 
 // presentation_main
 //*******************************************
 .presentation_main{
-    width: 50%;
-    border: 1px solid #000;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: $mq_s){ width: 500px;}
+    @media screen and (min-width: $mq_l){ width: 70%;}
+
     &__title{
-        font-size: 1.5em;
+        font-size: 2em;
         @media screen and (min-width: $mq_s){ font-size: 2.5em;}
         @media screen and (min-width: $mq_l){ font-size: 4em;}
     }
 
     &__subtitle{
-        text-align: start;
+        text-align: end;
         position: relative;
         top: -30px;
         font-size: 1em;
@@ -224,62 +240,223 @@ h4{
 // presentation_cv
 //*******************************************
 .presentation_cv{
-    border: 1px solid #000;
     position: relative;
 
-    img{
-        width: 200px;
+    &__cv{
+        max-width: 200px;
     }
 
-    .presentation_cv_avatar{
-        width: 50px;
+    &__avatar{
+        width: 100px;
         z-index: -1;
 
         position: absolute;
         top: -20px;
         right: -30px;
     }
-}
 
-//
-.realisation_item{
-    display: flex;
-    justify-content: center;
-
-    .realisation_item_monitor{
-        .realisation_img{
-            width: 500px;
+    &:hover{
+        .presentation_cv__avatar{
+            top: -50px;
+            right: -30px;
+            transition-duration: 1s;
         }
     }
-    
-    .realisation_item_description{
-        width: 50%;
+}
+
+// realisation title
+//*******************************************
+.realisation_title{
+    &__title{
+        font-size: 1.8em;
+        @media screen and (min-width: $mq_s){ font-size: 2.5em;}
+        @media screen and (min-width: $mq_l){ font-size: 4em;}
+    }
+
+    &__subtitle{
+        text-align: end;
+        position: relative;
+        top: -30px;
+        font-size: 1em;
+        color : $lightColor;
+        font-family: $handWritterFont;
+        @media screen and (min-width: $mq_s){ font-size: 1.2em; top: -50px;}
+        @media screen and (min-width: $mq_l){ font-size: 2em; top: -80px;}
     }
 }
 
-//
+// realisation item
+//*******************************************
+.realisation_item{
+    max-width: 1000px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $mq_s){flex-direction: row;}
+
+    &:nth-child(3),&:nth-child(5){
+        @media screen and (min-width: $mq_s){flex-direction: row-reverse;}
+    }
+    
+    &__monitor{
+        //padding: 0 50px 0 50px;
+        width: 200px;
+    }
+
+    &__description{
+        h4{
+            text-align: center;
+            background-color: darken($secondaryColor,3);
+            border-radius: 0 10px;
+            margin: 0;
+            font-size: 1.4em;
+        }
+    }
+
+    &__logo{
+        width: 30px;
+        margin-right: 5px;
+    }
+
+    &__technologie{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0 10px;
+        padding: 5px;
+    }
+
+    &__coming{
+        margin: 20px;
+        border: 5px $darkColor solid;
+        background-color: $lightColor;
+        padding-top: 20px;
+        min-width: 200px;
+        height: 100px;
+        color: $darkColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h5{
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        span{
+            font-size: 0.8em;
+        }
+    }
+
+    h5{
+        margin: 0;
+    }
+}
+
+// competence header
+//*******************************************
 .competences_header{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__avatar{
+        width: 100%;
+        max-width: 130px;
+    }
+
+    &__comment{
+        margin-bottom: 0;
+    }
+
+    &__title{
+        font-size: 1.5em;
+        margin: 0 0 20px 0;
+       
+        @media screen and (min-width: $mq_s){ font-size: 2.5em;}
+        @media screen and (min-width: $mq_l){ font-size: 4em;}
+
+        &--litle{
+            font-size: 0.5em;
+        }
+    }
+}
+
+// competence items
+//*******************************************
+.competences_items{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+// competence item
+//*******************************************
+.competences_item{
+    max-width: 450px;
+    border-top:  1px solid darken($greyLight, 25);
+    border-bottom: 1px solid darken($greyLight, 25);
+    border-radius: 0 10px;
+    margin: 10px;
+
+    &__comment{
+        margin-bottom: 0;
+    }
+
+    &__tech{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        p{
+            margin: 5px;
+        }
+    }
+}
+
+// footer
+//*******************************************
+
+.footer{
+    max-width: 1000px;
     display: flex;
     justify-content: center;
-}
+    align-items: center;
 
-//
-.competences_item{
-    .ide_yellow{
-        color : $ide_yellow;
-        font-family: $titleFont;
-        font-weight: bold;
+    &__avatar{
+        width: 200px;
     }
-    .ide_blue{
-        color : $ide_blue;
-        font-family: $titleFont;
-        font-weight: bold;
+
+    &__main{
+        max-width: 500px;
     }
-    .ide_green{
-        color : $ide_green;
-        font-family: $titleFont;
-        font-weight: bold;
+
+    &__reseaux{
+        display: flex;
+        justify-content: center;
+
+        &__icon{
+            border-radius: 50px;
+            margin-right: 20px;
+
+            &:hover{
+                transform: rotate(360deg);
+                transition-duration: 1s;
+            }
+        }
     }
+
 }
 
 /*******************************************************************/
@@ -312,6 +489,23 @@ a{
 
     h3{
         color: $ide_red;
+    }
+}
+
+.competences_item{
+    .ide_yellow{
+        color : $ide_yellow;
+        font-family: $titleFont;
+        font-weight: bold;
+    }
+    .ide_blue{
+        color : $ide_blue;
+        font-family: $titleFont;
+        font-weight: bold;
+    }
+    .ide_green{
+        color : $ide_green;
+        font-family: $mainFont;
     }
 }
 

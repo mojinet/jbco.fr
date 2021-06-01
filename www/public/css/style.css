@@ -59,10 +59,38 @@ h4 {
 
 .l_presentation {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  padding-top: 150px;
+}
+@media screen and (min-width: 992px) {
+  .l_presentation {
+    flex-direction: row;
+  }
+}
+
+.l_realisations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.l_competences {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.l_mainFooter {
+  display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*******************************************************************/
@@ -139,7 +167,6 @@ h4 {
 }
 
 .presentation_avatar {
-  border: 1px solid #000;
   position: relative;
 }
 .presentation_avatar__image_base {
@@ -155,7 +182,6 @@ h4 {
   transform-origin: center bottom;
   animation: 5s infinite avatar_head;
 }
-
 @keyframes avatar_head {
   0% {
     transform: rotate(0deg);
@@ -164,12 +190,26 @@ h4 {
     transform: rotate(-10deg);
   }
 }
+
 .presentation_main {
-  width: 50%;
-  border: 1px solid #000;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 576px) {
+  .presentation_main {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .presentation_main {
+    width: 70%;
+  }
 }
 .presentation_main__title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 @media screen and (min-width: 576px) {
   .presentation_main__title {
@@ -182,7 +222,7 @@ h4 {
   }
 }
 .presentation_main__subtitle {
-  text-align: start;
+  text-align: end;
   position: relative;
   top: -30px;
   font-size: 1em;
@@ -203,50 +243,207 @@ h4 {
 }
 
 .presentation_cv {
-  border: 1px solid #000;
   position: relative;
 }
-.presentation_cv img {
-  width: 200px;
+.presentation_cv__cv {
+  max-width: 200px;
 }
-.presentation_cv .presentation_cv_avatar {
-  width: 50px;
+.presentation_cv__avatar {
+  width: 100px;
   z-index: -1;
   position: absolute;
   top: -20px;
   right: -30px;
 }
+.presentation_cv:hover .presentation_cv__avatar {
+  top: -50px;
+  right: -30px;
+  transition-duration: 1s;
+}
+
+.realisation_title__title {
+  font-size: 1.8em;
+}
+@media screen and (min-width: 576px) {
+  .realisation_title__title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .realisation_title__title {
+    font-size: 4em;
+  }
+}
+.realisation_title__subtitle {
+  text-align: end;
+  position: relative;
+  top: -30px;
+  font-size: 1em;
+  color: white;
+  font-family: "Architects Daughte";
+}
+@media screen and (min-width: 576px) {
+  .realisation_title__subtitle {
+    font-size: 1.2em;
+    top: -50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .realisation_title__subtitle {
+    font-size: 2em;
+    top: -80px;
+  }
+}
 
 .realisation_item {
+  max-width: 1000px;
+  margin-bottom: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.realisation_item .realisation_item_monitor .realisation_img {
-  width: 500px;
+@media screen and (min-width: 576px) {
+  .realisation_item {
+    flex-direction: row;
+  }
 }
-.realisation_item .realisation_item_description {
-  width: 50%;
+@media screen and (min-width: 576px) {
+  .realisation_item:nth-child(3), .realisation_item:nth-child(5) {
+    flex-direction: row-reverse;
+  }
+}
+.realisation_item__monitor {
+  width: 200px;
+}
+.realisation_item__description h4 {
+  text-align: center;
+  background-color: #3371ee;
+  border-radius: 0 10px;
+  margin: 0;
+  font-size: 1.4em;
+}
+.realisation_item__logo {
+  width: 30px;
+  margin-right: 5px;
+}
+.realisation_item__technologie {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0 10px;
+  padding: 5px;
+}
+.realisation_item__coming {
+  margin: 20px;
+  border: 5px #282828 solid;
+  background-color: white;
+  padding-top: 20px;
+  min-width: 200px;
+  height: 100px;
+  color: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.realisation_item__coming h5 {
+  font-size: 1.5em;
+  margin: 0;
+}
+.realisation_item__coming span {
+  font-size: 0.8em;
+}
+.realisation_item h5 {
+  margin: 0;
 }
 
 .competences_header {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.competences_header__avatar {
+  width: 100%;
+  max-width: 130px;
+}
+.competences_header__comment {
+  margin-bottom: 0;
+}
+.competences_header__title {
+  font-size: 1.5em;
+  margin: 0 0 20px 0;
+}
+@media screen and (min-width: 576px) {
+  .competences_header__title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .competences_header__title {
+    font-size: 4em;
+  }
+}
+.competences_header__title--litle {
+  font-size: 0.5em;
+}
+
+.competences_items {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.competences_item {
+  max-width: 450px;
+  border-top: 1px solid #3f4041;
+  border-bottom: 1px solid #3f4041;
+  border-radius: 0 10px;
+  margin: 10px;
+}
+.competences_item__comment {
+  margin-bottom: 0;
+}
+.competences_item__tech {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.competences_item__tech img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.competences_item__tech p {
+  margin: 5px;
+}
+
+.footer {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__avatar {
+  width: 200px;
+}
+.footer__main {
+  max-width: 500px;
+}
+.footer__reseaux {
   display: flex;
   justify-content: center;
 }
-
-.competences_item .ide_yellow {
-  color: #CA9B2C;
-  font-family: "Montserrat";
-  font-weight: bold;
+.footer__reseaux__icon {
+  border-radius: 50px;
+  margin-right: 20px;
 }
-.competences_item .ide_blue {
-  color: #437EAE;
-  font-family: "Montserrat";
-  font-weight: bold;
-}
-.competences_item .ide_green {
-  color: #7DBC29;
-  font-family: "Montserrat";
-  font-weight: bold;
+.footer__reseaux__icon:hover {
+  transform: rotate(360deg);
+  transition-duration: 1s;
 }
 
 /*******************************************************************/
@@ -274,6 +471,21 @@ a {
 }
 .l_competences h3 {
   color: #AA3527;
+}
+
+.competences_item .ide_yellow {
+  color: #CA9B2C;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.competences_item .ide_blue {
+  color: #437EAE;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.competences_item .ide_green {
+  color: #7DBC29;
+  font-family: "Roboto";
 }
 
 .l_mainFooter {
