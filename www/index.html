@@ -12,8 +12,7 @@
     <!-- Layout : Main -->
     <main class="l_main">
         <!-- Layout : Header -->
-        <header class="l_topHeader">
-
+        <header class="l_topHeader" id="accueil">
             <!-- Module : header -->
             <header class="mainHeader">
                 <h1 class="main_logo">Jean-Baptiste <span class="main_logo--light">Cochinard</span></h1>
@@ -21,7 +20,7 @@
                     <ul class="main_nav">
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#presentation">Presentation</a></li>
-                        <li><a href="#realisation">Réalisations</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
                         <li><a href="#competences">Compétences</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -37,8 +36,7 @@
         </header>
 
         <!-- Layout : Presentation -->
-        <section class="l_presentation">
-
+        <section class="l_presentation" id="presentation">
             <!--Module :  avatar -->
             <div class="presentation_avatar">
                 <img class="presentation_avatar__image_base" src="/public/rss/img/avatarPres.png" alt="">
@@ -71,20 +69,18 @@
             <!--Module : cv -->
             <div class="presentation_cv">
                 <a href="/public/rss/doc/CV_2021v3.pdf"><img src="/public/rss/img/CV_mini.png" alt="" class="presentation_cv__cv"></a>
-                <img src="/public/rss/img/avatar_suprised.png" alt="" class="presentation_cv__avatar">
+                <img src="/public/rss/img/avatar_suprised.png" alt="CV" class="presentation_cv__avatar">
             </div>
         </section>
 
         <!-- Layout : realisations -->
-        <section class="l_realisations">
+        <section class="l_realisations" id="realisations">
 
             <!--Module titre section -->
             <div class="realisation_title">
                 <h3 class="realisation_title__title">Mes réalisations</h3>
                 <p class="realisation_title__subtitle">bien plus que du code, une passion !</p>
             </div>
-
-
 
             <!--Module : jbco.fr-->
             <div class="realisation_item">
@@ -170,7 +166,7 @@
         </section>
         
         <!-- Layout : competences -->
-        <section class="l_competences">
+        <section class="l_competences" id="competences">
             <!--Module : header-->
             <div class="competences_header">
                 <img class="competences_header__avatar" src="/public/rss/img/avatarPresW.png" alt="">
@@ -290,13 +286,15 @@
                         </p>
                     </div>
                 </div> 
+                
+                <!--Module : footer-->
+                <h3 class="competences_header__title">}</h3>
             </div>
-            <!--Module : footer-->
-            <h3 class="competences_header__title">}</h3>
+
         </section>
 
         <!-- Layout : footer -->
-        <footer class="l_mainFooter">
+        <footer class="l_mainFooter" id="contact">
             <div class="footer">
                 <img class="footer__avatar"src="/public/rss/img/img_contact.png" alt="">
                 <div class="footer__main">

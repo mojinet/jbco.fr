@@ -89,9 +89,14 @@ h4{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap : 20px 10px;
+    gap : 15px 10px;
     padding-top : 150px;
-    @media screen and (min-width: $mq_l){ flex-direction: row;}
+
+    @media screen and (min-width: $mq_l){ 
+        flex-direction: row;
+        align-items: flex-end;
+        padding-top : 50px;
+    }
 }
 
 .l_realisations{
@@ -110,9 +115,12 @@ h4{
 
 .l_mainFooter{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: $mq_s){ 
+        margin-bottom: 40px;
+    }
 }
 
 /*******************************************************************/
@@ -143,8 +151,18 @@ h4{
     justify-content: center;
     flex-wrap: wrap;
     gap: 0 20px;
-    display: none;
     @media screen and (min-width: $mq_s){ display: block;}
+    @media screen and (max-width: $mq_s){ 
+        z-index: 1;
+        position: fixed;
+        bottom : 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: $mainColor;
+        margin: 0;
+        padding: 15px 0;
+    }
 }
 
 //Jumbotron
@@ -193,7 +211,7 @@ h4{
         max-width: 180px;
         position: absolute;
         top : -130px;
-        left: -25px;
+        left: -27px;
         transform-origin: center bottom;
         animation: 5s infinite avatar_head;
 
@@ -211,16 +229,17 @@ h4{
 // presentation_main
 //*******************************************
 .presentation_main{
-    max-width: 1000px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: $mq_s){ width: 500px;}
+    @media screen and (min-width: $mq_s){ width: 100%;}
     @media screen and (min-width: $mq_l){ width: 70%;}
 
     &__title{
         font-size: 2em;
+        margin-top: 0;
         @media screen and (min-width: $mq_s){ font-size: 2.5em;}
         @media screen and (min-width: $mq_l){ font-size: 4em;}
     }
@@ -228,12 +247,17 @@ h4{
     &__subtitle{
         text-align: end;
         position: relative;
-        top: -30px;
+        margin-bottom : 0;
+        top: -38px;
         font-size: 1em;
         color : $greyLight;
         font-family: $handWritterFont;
         @media screen and (min-width: $mq_s){ font-size: 1.2em; top: -50px;}
         @media screen and (min-width: $mq_l){ font-size: 2em; top: -80px;}
+    }
+
+    p{
+        margin: 0;
     }
 }
 
@@ -241,9 +265,12 @@ h4{
 //*******************************************
 .presentation_cv{
     position: relative;
+    padding-top: 20px;
+    padding-left: 5px;
 
     &__cv{
         max-width: 200px;
+        box-shadow: 1px 1px 5px black;
     }
 
     &__avatar{
@@ -251,14 +278,14 @@ h4{
         z-index: -1;
 
         position: absolute;
-        top: -20px;
-        right: -30px;
+        top: -15px;
+        right: 10px;
     }
 
     &:hover{
         .presentation_cv__avatar{
             top: -50px;
-            right: -30px;
+            right: 10px;
             transition-duration: 1s;
         }
     }
@@ -268,6 +295,7 @@ h4{
 //*******************************************
 .realisation_title{
     &__title{
+        margin-top: 0;
         font-size: 1.8em;
         @media screen and (min-width: $mq_s){ font-size: 2.5em;}
         @media screen and (min-width: $mq_l){ font-size: 4em;}
@@ -300,12 +328,13 @@ h4{
         @media screen and (min-width: $mq_s){flex-direction: row-reverse;}
     }
     
-    &__monitor{
-        //padding: 0 50px 0 50px;
+    &__monitor{ 
         width: 200px;
+        @media screen and (min-width: $mq_s){padding: 0 50px 0 50px;}
     }
 
     &__description{
+        max-width: 500px;
         h4{
             text-align: center;
             background-color: darken($secondaryColor,3);
@@ -376,6 +405,7 @@ h4{
     &__title{
         font-size: 1.5em;
         margin: 0 0 20px 0;
+        width: 100%;
        
         @media screen and (min-width: $mq_s){ font-size: 2.5em;}
         @media screen and (min-width: $mq_l){ font-size: 4em;}
@@ -391,7 +421,7 @@ h4{
 .competences_items{
     max-width: 1000px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -402,7 +432,11 @@ h4{
     border-top:  1px solid darken($greyLight, 25);
     border-bottom: 1px solid darken($greyLight, 25);
     border-radius: 0 10px;
-    margin: 10px;
+    margin: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: $mq_l){ border: none;}
 
     &__comment{
         margin-bottom: 0;
@@ -431,6 +465,7 @@ h4{
 .footer{
     max-width: 1000px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
