@@ -71,7 +71,8 @@ h4{
 /*******************************************************************/
 
 .l_competences,.l_mainFooter,.l_presentation,.l_realisations{
-    padding : 50px 10px;
+    padding : 50px 15px;
+    @media screen and (min-width: $mq_s){ padding: 50px 20px;}
 }
 
 .l_topHeader{
@@ -104,6 +105,8 @@ h4{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
 
 .l_competences{
@@ -118,14 +121,54 @@ h4{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: $mq_s){ 
-        margin-bottom: 40px;
-    }
 }
 
 /*******************************************************************/
 /*                        Modules : bloc                           */
 /*******************************************************************/
+
+// Fixed menu
+//*******************************************
+.contactbull{
+
+/*     &__item:nth-child(2){
+        position: fixed;
+        bottom : 50px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+        border-radius: 50px;
+        z-index: 2;
+        background-color: lighten($mainColor,20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    &__item:nth-child(1){
+        position: fixed;
+        bottom : 0px;
+        right: calc(50% - 20px);
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+        z-index: 2;
+        background-color: lighten($mainColor,20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: $mq_s){ margin: 20px; right: 0;}
+    }
+
+    img{
+        position: relative;
+        top: 2px;
+        width: 30px;
+    }
+}
 
 // Header
 //*******************************************
@@ -139,6 +182,7 @@ h4{
 }
 
 // main_logo
+//*******************************************
 .main_logo{
     &--light{
         font-weight: normal;
@@ -146,22 +190,17 @@ h4{
 }
 
 // main_nav
+//*******************************************
 .main_nav{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0 20px;
+    display: none;
     @media screen and (min-width: $mq_s){ display: block;}
-    @media screen and (max-width: $mq_s){ 
-        z-index: 1;
-        position: fixed;
-        bottom : 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        background-color: $mainColor;
-        margin: 0;
-        padding: 15px 0;
+    li{
+        margin-right: 15px;
+        margin-top: 10px;
     }
 }
 
@@ -200,18 +239,20 @@ h4{
 //*******************************************
 .presentation_avatar{
     position: relative;
+    margin-left: 20px;
 
     &__image_base{
-        width: 100%;
+        width: 90%;
         max-width: 130px;
+        
     }
 
     &__image_avatar{
-        width: 120%;
+        width: 105%;
         max-width: 180px;
         position: absolute;
-        top : -130px;
-        left: -27px;
+        top : -110px;
+        left: -21px;
         transform-origin: center bottom;
         animation: 5s infinite avatar_head;
 
@@ -229,7 +270,7 @@ h4{
 // presentation_main
 //*******************************************
 .presentation_main{
-    max-width: 800px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,7 +307,7 @@ h4{
 .presentation_cv{
     position: relative;
     padding-top: 20px;
-    padding-left: 5px;
+    padding-left: 20px;
 
     &__cv{
         max-width: 200px;
@@ -287,6 +328,26 @@ h4{
             top: -50px;
             right: 10px;
             transition-duration: 1s;
+        }
+    }
+}
+
+// realisation swimming avatar
+//*******************************************
+.realisation_swim{
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    width: 100px;
+    z-index : 0;
+    animation: 5s infinite ease-out avatar_swim;
+    @media screen and (max-width: $mq_s){ left: calc(50% - 50px);}
+    @keyframes avatar_swim {
+        0%{
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(20%);
         }
     }
 }
@@ -316,6 +377,7 @@ h4{
 // realisation item
 //*******************************************
 .realisation_item{
+    position: relative;
     max-width: 1000px;
     margin-bottom: 40px;
     display: flex;
@@ -330,17 +392,36 @@ h4{
     
     &__monitor{ 
         width: 200px;
+        z-index : 1;
         @media screen and (min-width: $mq_s){padding: 0 50px 0 50px;}
+        @media screen and (min-width: $mq_xl){width: 250px;}
+
+        &:hover{
+            filter: drop-shadow(1px 1px 1px darken($secondaryColor,30));
+        }
+    }
+
+    a{
+        z-index: 0;
     }
 
     &__description{
-        max-width: 500px;
+        max-width: 800px;
+        a{
+            h4{
+                &:hover{
+                    background-color: darken($secondaryColor,5);
+                    color: wheat;
+                }
+            }
+        }
         h4{
             text-align: center;
             background-color: darken($secondaryColor,3);
             border-radius: 0 10px;
             margin: 0;
-            font-size: 1.4em;
+            font-size: 1.3em;
+            padding: 10px;
         }
     }
 
@@ -370,7 +451,7 @@ h4{
         justify-content: center;
         align-items: center;
         h5{
-            font-size: 1.5em;
+            font-size: 1.4em;
             margin: 0;
         }
 
@@ -406,7 +487,6 @@ h4{
         font-size: 1.5em;
         margin: 0 0 20px 0;
         width: 100%;
-       
         @media screen and (min-width: $mq_s){ font-size: 2.5em;}
         @media screen and (min-width: $mq_l){ font-size: 4em;}
 
