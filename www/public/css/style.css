@@ -153,6 +153,11 @@ h4 {
   align-items: center;
   flex-wrap: wrap;
   gap: 0 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #EF7E41;
+  z-index: 2;
 }
 
 .main_logo--light {
