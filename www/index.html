@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Layout : Main -->
-    <main class="l_main">
+    <main class="l_main" id="main">
         <!-- Fixed menu -->
         <div class="contactbull">
             <div class="contactbull__item">
@@ -28,7 +28,8 @@
             <!-- Module : header -->
             <header class="mainHeader">
                 <h1 class="main_logo">Jean-Baptiste <span class="main_logo--light">Cochinard</span></h1>
-                <nav >
+                <!-- Full nav -->
+                <nav id="nav_full">
                     <ul class="main_nav">
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#presentation">Présentation</a></li>
@@ -37,6 +38,17 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <!-- Mobile nav -->
+                <div id="smart_nav">
+                    <ul class="main_nav_mobile">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#realisations">Réalisations</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <img src="public/rss/img/menu.png" alt="" id="main_nav-icone">
             </header>
 
             <!-- Module : jumbotron-->
@@ -323,5 +335,6 @@
             </div>
         </footer>
     </main>
+    <script src="public/js/nav.js"></script>
 </body>
 </html>

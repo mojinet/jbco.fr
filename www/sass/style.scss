@@ -28,6 +28,9 @@ $mq_s : '576px';
 /*******************************************************************/
 /*                          General                                */
 /*******************************************************************/
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     margin : 0;
@@ -178,12 +181,17 @@ h4{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0 50px;
     position: fixed;
     left: 0;
     right: 0;
     background-color: $mainColor;
     z-index: 2;
+    @media screen and (min-width: $mq_s){ 
+        gap: 0 50px;
+    }
+    @media screen and (max-width: 426px){ 
+        
+    }
 }
 
 // main_logo
@@ -191,6 +199,9 @@ h4{
 .main_logo{
     &--light{
         font-weight: normal;
+    }
+    @media screen and (max-width: 426px){ 
+        font-size: 1em;
     }
 }
 
@@ -202,13 +213,52 @@ h4{
     flex-wrap: wrap;
     gap: 0 20px;
     display: none;
-    @media screen and (min-width: $mq_s){ display: block;}
+    @media screen and (min-width: $mq_s){ 
+        display: block;
+    }
+
     li{
         margin-right: 15px;
         margin-top: 10px;
     }
+
+    &_mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        font-size: 2em;
+    }
 }
 
+#main_nav-icone{
+    width: 20px;
+    display: none;
+    @media screen and (max-width: $mq_s){ 
+        display: block;
+    }
+}
+
+#nav_full{
+    display: block;
+}
+
+#smart_nav{
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $mainColor;
+    z-index: 3;
+    transition-duration: 2s;
+}
+
+.openNav{
+    right: 0 !important;
+    transition-duration: 2s;
+    animation-timing-function: ease-out;
+}
 //Jumbotron
 //*******************************************
 .jumbotron{
