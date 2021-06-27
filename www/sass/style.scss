@@ -75,7 +75,14 @@ h4{
 
 .l_competences,.l_mainFooter,.l_presentation,.l_realisations{
     padding : 50px 15px;
+    padding-top: 150px !important;
     @media screen and (min-width: $mq_s){ padding: 50px 20px;}
+}
+.l_competences,.l_mainFooter,.l_realisations{
+    @media screen and (max-width: $mq_s){ padding-top: 80px !important;}
+}
+.l_presentation{
+    @media screen and (max-width: $mq_s){ padding-top: 150px !important;}
 }
 
 .l_topHeader{
@@ -117,6 +124,7 @@ h4{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .l_mainFooter{
@@ -162,8 +170,14 @@ h4{
         display: flex;
         justify-content: center;
         align-items: center;
+        transition-duration: 1s;
 
         @media screen and (min-width: $mq_s){ margin: 20px; right: 0;}
+
+        &:hover{
+            transform: scale(1.2);
+            transition-duration: 1s;
+        }
     }
 
     img{
@@ -225,9 +239,10 @@ h4{
     &_mobile{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
         height: 100%;
         font-size: 2em;
+        gap: 30px 0;
     }
 }
 
@@ -604,6 +619,7 @@ h4{
     justify-content: center;
     align-items: center;
 
+    padding-bottom: 50px;
     &__avatar{
         width: 200px;
     }
@@ -632,6 +648,44 @@ h4{
 /*******************************************************************/
 /*                          Themes                                 */
 /*******************************************************************/
+#switch_theme{
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    width: 20px;
+    height: 20px;
+    z-index: 5;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding : 5px;
+    transition-duration: 0.5s;
+    img{
+        width: 100%;
+    }
+}
+
+.switch_black{
+    border: 3px solid $darkColor !important;
+    transition-duration: 0.5s;
+}
+
+.switch_push{
+    transform: translateX(45px);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+#switch_container{
+    position: absolute;
+    top : 50px;
+    right: 10px;
+    width: 80px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+.display_none{
+    display: none;
+}
 
 a{
     font-family: $titleFont;
@@ -653,13 +707,17 @@ a{
     color: $lightColor;
 }
 
+
 .l_competences{
     background-color: $darkColor;
     color: lighten($darkColor,40);
+    transition-duration: 1s;
+}
 
-    h3{
-        color: $ide_red;
-    }
+.l_competencesW{
+    background-color: $lightColor;
+    color: $darkColor;
+    transition-duration: 1s;
 }
 
 .competences_item{

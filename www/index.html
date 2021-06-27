@@ -189,9 +189,19 @@
         
         <!-- Layout : competences -->
         <section class="l_competences" id="competences">
+            <!--Switch darkMode-->
+            <div id="switch_container">
+                <div id="switch_theme">
+                    <img src="public/rss/logo/sun.png" alt="" class="display_none" id="switch_sun">
+                    <img src="public/rss/logo/moon.png" alt="" id="switch_moon">
+                </div>
+            </div>
+
+            
             <!--Module : header-->
             <div class="competences_header">
-                <img class="competences_header__avatar" src="/public/rss/img/avatarPresW.png" alt="">
+                <img class="competences_header__avatar" src="/public/rss/img/avatarPresW.png" alt="" id="competence_avatar_W">
+                <img class="competences_header__avatar display_none" src="/public/rss/img/avatarPres.png" alt="" id="competence_avatar_B">
                 <p class="competences_header__comment">
                     /* <br>
                     *  <br>
@@ -224,7 +234,8 @@
                         <span class="ide_blue">BACK_END</span>
                     </div>
                     <div class="competences_item__tech">
-                        <img src="/public/rss/img/001-gearsW.png" alt="">
+                        <img src="/public/rss/img/001-gearsW.png" alt="" id="gearW">
+                        <img src="/public/rss/img/001-gears.png" alt="" class="display_none" id="gearB">
                         <p class="ide_green">
                             PHP & Symfony <br>
                             Java EE<br>
@@ -249,7 +260,8 @@
                         <span class="ide_blue">FRONT_END</span>
                     </p>
                     <div  class="competences_item__tech">
-                        <img src="/public/rss/img/001-monitorW.png" alt="">
+                        <img src="/public/rss/img/001-monitorW.png" alt="" id="monitorW">
+                        <img src="/public/rss/img/001-monitor.png" alt="" class="display_none" id="monitorB">
                         <p class="ide_green">
                             HTML <br>
                             CSS, Sass & bootstrap <br>
@@ -274,7 +286,8 @@
                         <span class="ide_blue">DESIGN</span>
                     </p>
                     <div  class="competences_item__tech">
-                        <img src="/public/rss/img/003-color-palette.png" alt="">
+                        <img src="/public/rss/img/003-color-palette.png" alt="" id="paletteW">
+                        <img src="/public/rss/img/003-color-paletteB.png" alt="" class="display_none" id="paletteB">
                         <p class="ide_green">
                             Adobe XD <br>
                             Photoshop <br>
@@ -299,7 +312,8 @@
                         <span class="ide_blue">METHODES</span>
                     </p>
                     <div  class="competences_item__tech">
-                        <img src="/public/rss/img/001-conceptW.png" alt="">
+                        <img src="/public/rss/img/001-conceptW.png" alt="" id="conceptW">
+                        <img src="/public/rss/img/001-concept.png" alt="" class="display_none" id="conceptB">
                         <p class="ide_green">
                             Modelisation de données (Oracle CDM)<br>
                             Méthodologie Agile (Scrum)<br>
