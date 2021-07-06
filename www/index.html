@@ -10,7 +10,11 @@
     <meta property="og:description" content="Je m'appelle Jean-Baptiste Cochinard et je suis développeur web. Je peux intervenir sur la création d'une maquette de site, réaliser son intégration ainsi que développer des fonctionnalités qui rendront le site dynamique."/>
     <meta name="description" content="Je m'appelle Jean-Baptiste Cochinard et je suis développeur web. Je peux intervenir sur la création d'une maquette de site, réaliser son intégration ainsi que développer des fonctionnalités qui rendront le site dynamique.">
     <title>Développeur Web & Mobile | Jean-Baptiste Cochinard</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin defer></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin defer></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
     <script src="public/js/nav.js" defer></script>
+    <script src="public/js/realisation.jsx" type="text/babel" defer></script>
 </head>
 <body>
     <!-- Layout : Main -->
@@ -103,87 +107,10 @@
                 <p class="realisation_title__subtitle">bien plus que du code, une passion !</p>
             </div>
 
-            <!--Module : jbco.fr-->
-            <div class="realisation_item">
-                <img class="realisation_swim" src="public/rss/img/designredbuble3.png" alt="">
-                <a href="#"><img class="realisation_item__monitor" src="/public/rss/img/mockup_jbco.png" alt="" class="realisation_img"></a>
-                <div class="realisation_item__description">
-                    <a href="#"><h4>Jbco.fr</h4></a>
-                    <p>
-                        Jbco.fr est le site que vous visitez actuellement, 
-                        il permet de vous faire connaître mes compétences en 
-                        développement informatique. Le contenu des réalisations 
-                        sera mis à jour régulièrement.
-                    </p>
-                    <h5>Technologies utilisées :</h5>
-                    <div class="realisation_item__technologie">
-                        <img class="realisation_item__logo" src="/public/rss/logo/xd.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/ps.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <!--Module : hazpiq.com-->
-            <div class="realisation_item">
-                <a href="http://hazpiq.com" target="_blank"><img class="realisation_item__monitor" src="/public/rss/img/mockup_hazpiq.png" alt=""></a>
-                <div class="realisation_item__description">
-                    <a href="http://hazpiq.com" target="_blank"> <h4>Hazpiq.com</h4></a>
-                    <p>
-                        Hazpiq.com est le site d'un groupe de métal progressif 
-                        de la région parisienne. Leur premier album est sorti 
-                        en janvier 2019 et le site permet de le promouvoir avec 
-                        les différentes sections telles que music et live qui regroupent 
-                        leurs clips musicaux.
-                    </p>
-                    <h5>Technologies utilisées :</h5>
-                    <div class="realisation_item__technologie">
-                        <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
-                    </div>
-                </div> 
-            </div>
-
-            <!--Module : CseTerritoireMoulins.fr-->
-            <div class="realisation_item">
-                <a href="https://cseterritoiremoulins.fr/" target="_blank"><img class="realisation_item__monitor" src="/public/rss/img/mockup_cse.png" alt=""></a>
-                <div class="realisation_item__description">
-                    <a href="https://cseterritoiremoulins.fr/" target="_blank"><h4>CseTerritoireMoulins.fr</h4></a>
-                    <p>
-                        cseterritoiremoulins.fr est le site du comité social et économique de l'UNAPEI d'Yzeure. 
-                        Il permet aux membres du comité de visualiser les actualités, 
-                        de poser des questions anonymes et aux administrateurs du site de gérer le contenu du site.
-                    </p>
-                    <h5>Technologies utilisées :</h5>
-                    <div class="realisation_item__technologie">
-                        <img class="realisation_item__logo" src="/public/rss/logo/xd.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/php.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/mysql.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/html.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/css.png" alt="">
-                        <img class="realisation_item__logo" src="/public/rss/logo/sass.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <!--Module : A venir -->
-            <div class="realisation_item">
-                <div class="realisation_item__coming">
-                    <h5>A venir</h5>
-                    <span>Revenez vite !</span>
-                </div>
-                <div class="realisation_item__description">
-                    <h4>A venir</h4>
-                    <p>
-                        D'autres projets sont en cours de développement et 
-                        ne vont pas tarder à apparaître sur le site !
-                    </p>
-                </div>
-            </div>
+            <div id="realisation_components"></div>  
         </section>
+
+        
         
         <!-- Layout : competences -->
         <section class="l_competences" id="competences">
